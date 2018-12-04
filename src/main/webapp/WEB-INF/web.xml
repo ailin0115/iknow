@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+<!-- <web-app xmlns="http://java.sun.com/xml/ns/javaee" -->
+<!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!--         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" -->
+<!--         version="2.5"> -->
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<!-- springmvc 配置 -->
+	<servlet>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<!-- classpath 相当与src路径.文件加载可以加这个，就是以/分割的路径。包名.类名不需要使用 -->
+			<param-value>classpath:application-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+	   <welcome-file>login.jsp</welcome-file>
+	   <welcome-file>public-login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

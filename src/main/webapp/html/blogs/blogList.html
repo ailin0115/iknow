@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BLOGs</title>
+        <!-- 引入样式 -->
+        <link rel="stylesheet" href="https://unpkg.com/vue-easytable/umd/css/index.css">
+	</head>
+    <body>
+	    <div id="blogList">
+            <table>
+                <thead>
+                    <tr><th>Name</th><th>Content</th><th>Date</th></tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items">
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" onclick="get()"/>
+        </div>
+        
+    </body>
+    <!--     <script src="../../js/common/require-2.3.6.js" data-main="../../js/common/main" async="async" defer></script> -->
+        <script src="../../js/common/require-2.3.6.js" data-main="../../js/common/main"></script>
+    <!--     <script src="../../js/common/require-2.3.6.js"></script> -->
+    <!--     <script src="../../js/common/main.js"></script> -->
+    
+    <!-- 引入Vue -->
+    <!--     <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+    <!-- 引入组件库 -->
+    <!--     <script src="https://unpkg.com/vue-easytable/umd/js/index.js"></script> -->
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.js"></script>
+    <script src="../../js/blogs/blog-list.js"></script>
+</html>
